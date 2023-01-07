@@ -1,3 +1,26 @@
+Server Info :
+
+uri: ldap://openldap.default.svc.cluster.local:1389
+base: dc=example,dc=org
+binddn: cn=admin,dc=example,dc=org
+bindpw: adminpassword
+
+---------------------------------------
+user info:
+
+users: user0 , user02
+pass: password01 , password02
+
+adminuser: admin
+pass: adminpassword
+
+-----------------------------------------------
 
 # for disk issue
-// kubectl taint node < node name > node.kubernetes.io/disk-pressure-
+ kubectl taint node < node name > node.kubernetes.io/disk-pressure-
+
+
+# to check connection
+ldapsearch -x -b "dc=example,dc=org" -H ldap://192.168.178.29
+
+
