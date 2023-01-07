@@ -1,0 +1,3 @@
+
+# for disk issue
+// kubectl taint node < node name > node.kubernetes.io/disk-pressure-
